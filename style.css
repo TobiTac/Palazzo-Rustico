@@ -1,0 +1,750 @@
+/* Grundlayout */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #1d1d1f;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Min Höhe 100vh setzen, um die Höhe des Bildschirms korrekt zu nutzen */
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background-color: #252525;
+  color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.burger-menu i {
+  color: #ffffff;
+  font-size: 2.5rem;
+  z-index: 2000;
+}
+
+/* Hero Video */
+.hero-video {
+  width: 100%;
+  overflow: ;
+  position: relative;
+  height: 60vh;
+  background-color: black;
+  margin-top: 0;
+  transition: margin-top 0.3s ease;
+}
+
+.hero-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Bild + Text Sektion */
+.image-text-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.image-text-section img {
+  max-width: 100%;
+  width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.image-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.image-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.image-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Galerie */
+.galerie-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 4rem;
+}
+
+.galerie {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0 2rem;
+  margin-bottom: 4rem;
+}
+
+.galerie-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Karte */
+#map {
+  padding: 2rem;
+  background-color: #ffffff;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.map-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #1d1d1f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.map-container {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-container iframe {
+  border: none;
+  border-radius: 8px;
+  max-width: 100%;
+  width: 100%;
+  height: 450px;
+  max-height: 450px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  background-color: #252525;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  margin-top: auto; /* Der Footer bleibt unten */
+}
+
+.footer-links {
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffcc00;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.social-icon {
+  color: #ffffff;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #ffcc00;
+}
+
+footer p {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* Cookie Banner (Modern) */
+.cookie-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.cookie-box {
+  max-width: 600px;
+  width: 100%;
+  background: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.cookie-box h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.cookie-box p {
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.cookie-options label {
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+.cookie-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cookie-buttons button {
+  background-color: #ffcc00;
+  color: #252525;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.cookie-buttons button:hover {
+  background-color: #e5b800;
+}
+
+/* Anpassungen für mobile Geräte */
+@media (max-width: 768px) {
+  .cookie-modal {
+    padding: 2rem;
+  }
+
+  .cookie-box {
+    padding: 1rem;
+    width: 100%;
+    margin: 0 1rem;
+  }
+
+  .cookie-box h3 {
+    font-size: 1.25rem;
+  }
+
+  .cookie-box p {
+    font-size: 0.9rem;
+  }
+
+  .cookie-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cookie-buttons button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+
+  /* Mobile Navigation */
+  .navbar {
+    flex-wrap: wrap;
+    padding: 1.5rem 1rem;
+  }
+
+  .burger-menu {
+    display: block;
+    margin-left: auto;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #252525;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  nav ul.active {
+    max-height: 300px;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid #444;
+  }
+
+  nav ul li:last-child {
+    border-bottom: none;
+  }
+
+  nav a {
+    font-size: 1.5rem;
+  }
+
+  .hero-video {
+    height: 40vh;
+  }
+
+  main {
+    padding: 2rem 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .galerie-item img {
+    height: 150px;
+  }
+
+  .image-text-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .image-text {
+    text-align: center;
+  }
+
+  .galerie-title,
+  .map-title {
+    font-size: 1.8rem;
+  }
+
+  .cookie-box {
+    padding: 1rem;
+  }
+
+  .cookie-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cookie-buttons button {
+    width: 100%;
+  }
+}
+
+/* Gesamtes Layout */
+body, html {
+  height: 100%;  /* Verhindert unnötige Abstände und stellt sicher, dass das Layout die gesamte Höhe einnimmt */
+  margin: 0;     /* Entfernt Standardabstände des Browsers */
+  display: flex;
+  flex-direction: column;  /* Sorgt dafür, dass die Abschnitte vertikal gestapelt werden */
+}
+
+/* Kontakt-Seite Styling */
+.kontakt-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Stellt sicher, dass der Abstand gleichmäßig zwischen Inhalt und Footer verteilt wird */
+  padding: 50px 20px;
+  background-color: #f7f7f7;
+  flex-grow: 1;  /* Der Container nimmt den verbleibenden Platz ein */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  flex-grow: 1; /* Der Container wächst, um den freien Platz zu füllen */
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.contact-methods {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-10px);
+}
+
+.contact-item i {
+  font-size: 36px;
+  color: #4c4c4c;
+  margin-bottom: 15px;
+}
+
+.contact-item h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-item p {
+  font-size: 16px;
+  color: #555;
+}
+
+.contact-item a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 0;  /* Entfernt unnötige Abstände über dem Footer */
+}
+
+.footer-links a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin: 20px 0;
+}
+
+.social-icon {
+  color: #fff;
+  margin: 0 15px;
+  font-size: 24px;
+}
+
+.social-icon:hover {
+  color: #1a73e8;
+}
+
+
+/* Gesamtes Layout */
+body, html {
+  height: 100%;  /* Verhindert unnötige Abstände und stellt sicher, dass das Layout die gesamte Höhe einnimmt */
+  margin: 0;     /* Entfernt Standardabstände des Browsers */
+  display: flex;
+  flex-direction: column;  /* Stellt sicher, dass die Abschnitte vertikal gestapelt werden */
+}
+
+/* Buchungs-Seite Styling */
+.buchung-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Sorgt dafür, dass der Abstand gleichmäßig zwischen Inhalt und Footer verteilt wird */
+  padding: 50px 20px;
+  background-color: #f7f7f7;
+  flex-grow: 1;  /* Der Container nimmt den verbleibenden Platz ein */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  flex-grow: 1; /* Der Container wächst, um den freien Platz zu füllen */
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.buchung-methoden {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.buchung-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.buchung-item:hover {
+  transform: translateY(-10px);
+}
+
+.buchung-item i {
+  font-size: 36px;
+  color: #4c4c4c;
+  margin-bottom: 15px;
+}
+
+.buchung-item h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.buchung-item p {
+  font-size: 16px;
+  color: #555;
+}
+
+.buchung-item ul {
+  list-style-type: disc;
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.buchungsbutton-container {
+  margin-top: 40px;
+}
+
+.buchungsbutton {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #1a73e8;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.buchungsbutton:hover {
+  background-color: #005bb5;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 0;  /* Entfernt unnötige Abstände über dem Footer */
+}
+
+.footer-links a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin: 20px 0;
+}
+
+.social-icon {
+  color: #fff;
+  margin: 0 15px;
+  font-size: 24px;
+}
+
+.social-icon:hover {
+  color: #1a73e8;
+}
+
+/* Galerie 2 Styling für die Galerie auf der Galerie-Seite */
+.galerie-2 #galerie {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+}
+
+.galerie-2 .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.galerie-2 .section-title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.galerie-2 .section-description {
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+/* Galerie Grid für die zweite Galerie */
+.galerie-2 .galerie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.galerie-2 .galerie-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.galerie-2 .galerie-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.galerie-2 .galerie-item:hover {
+  transform: scale(1.05);
+}
+
+.galerie-2 .galerie-item img:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 40px 0;
+  margin-top: auto;
+}
+
+footer .footer-links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer .footer-links a:hover {
+  color: #f1c40f;
+}
+
+footer .social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5em;
+}
+
+footer .social-icons a:hover {
+  color: #f1c40f;
+}
+
+footer p {
+  margin-top: 20px;
+  font-size: 1em;
+}

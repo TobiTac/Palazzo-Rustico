@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontakt - Palazzo Rustico</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo">Palazzo Rustico</a>
+  <div class="burger-menu" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+  <nav>
+    <ul id="nav-list">
+      <li><a href="UnserHaus.html">Unser Haus</a></li>
+      <li><a href="Buchung.html">Buchung</a></li>
+      <li><a href="Galerie.html">Galerie</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="kontakt" class="kontakt-section">
+  <div class="container">
+    <h2 class="section-title">Kontaktieren Sie uns</h2>
+    <p class="section-description">Wir freuen uns, von Ihnen zu hören. Für Anfragen, Buchungen oder weitere Informationen, erreichen Sie uns einfach über die unten angegebenen Kontaktmöglichkeiten.</p>
+    
+    <div class="contact-methods">
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <h3>E-Mail</h3>
+        <p>Schreiben Sie uns eine Nachricht, und wir werden so schnell wie möglich antworten.</p>
+        <p><strong>Unsere E-Mail-Adresse:</strong> <a href="mailto:kontakt@palazzorustico.it">kontakt@palazzorustico.it</a></p>
+      </div>
+      
+      <div class="contact-item">
+        <i class="fas fa-phone-alt"></i>
+        <h3>Telefon</h3>
+        <p>Rufen Sie uns an, wenn Sie sofortige Unterstützung benötigen oder eine Buchung tätigen möchten.</p>
+        <p><strong>Telefonnummer:</strong> <a href="tel:+490123456789">+49 0123 456789</a></p>
+      </div>
+
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Besuchen Sie uns</h3>
+        <p>Wenn Sie in der Nähe sind, können Sie uns auch persönlich besuchen. Wir freuen uns darauf, Sie im Palazzo Rustico zu begrüßen.</p>
+        <p><strong>Adresse:</strong> Via Mulino, Tremosine, BS, 25010, Italien</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="Impressum.html">Impressum</a>
+    <a href="Datenschutz.html">Datenschutz</a>
+    <a href="AGBs.html">AGBs</a>
+    <a href="Kontakt.html">Kontakt</a>
+    <a href="Buchung.html">Buchung</a>
+    <a href="Galerie.html">Galerie</a>
+  </div>
+  <div class="social-icons">
+    <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+    <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.youtube.com" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+  </div>
+  <p>&copy; <span id="copyright-year">2025</span> Palazzo Rustico. Alle Rechte vorbehalten.</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const navList = document.getElementById('nav-list');
+    const hero = document.getElementById('hero');
+    navList.classList.toggle('active');
+    hero.style.marginTop = navList.classList.contains('active') ? navList.offsetHeight + 'px' : '0';
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("copyright-year").textContent = new Date().getFullYear();
+  });
+</script>
+
+</body>
+</html>

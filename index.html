@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Palazzo Rustico</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo">Palazzo Rustico</a>
+  <div class="burger-menu" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+  <nav>
+    <ul id="nav-list">
+      <li><a href="UnserHaus.html">Unser Haus</a></li>
+      <li><a href="Buchung.html">Buchung</a></li>
+      <li><a href="Galerie.html">Galerie</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero-video" id="hero" >
+  <video autoplay muted loop playsinline>
+    <source src="medien/kurzer-Zoom.mp4" type="video/mp4" />
+    Dein Browser unterstützt dieses Video nicht.
+  </video>
+</section>
+
+<section class="image-text-section">
+  <div class="image-text">
+    <h2>Ein Stück Gardasee</h2>
+    <p>Genießen Sie Ihren Aufenthalt in einem charmanten Steinhaus mitten in der Natur. Das Palazzo Rustico bietet eine einzigartige Kombination aus rustikalem Flair und modernem Komfort.</p>
+  </div>
+  <img src="medien/Image-1.jpg" alt="Palazzo Rustico Außenansicht" />
+</section>
+
+<section id="galerie">
+  <h2 class="galerie-title">Galerie</h2>
+  <div class="galerie">
+    <div class="galerie-item"><img src="medien/Image-2.jpg" alt="Bild 2 der Unterkunft" /></div>
+    <div class="galerie-item"><img src="medien/Image-3.jpg" alt="Bild 3 der Unterkunft" /></div>
+    <div class="galerie-item"><img src="medien/Image-4.jpg" alt="Bild 4 der Unterkunft" /></div>
+    <div class="galerie-item"><img src="medien/Image-5.jpg" alt="Bild 5 der Unterkunft" /></div>
+    <div class="galerie-item"><img src="medien/Image-6.jpg" alt="Bild 6 der Unterkunft" /></div>
+    <div class="galerie-item"><img src="medien/Image-7.jpg" alt="Bild 7 der Unterkunft" /></div>
+    <div class="galerie-item"><img src="medien/Image-8.jpg" alt="Bild 8 der Unterkunft" /></div>
+    <div class="galerie-item"><img src="medien/Image-9.jpg" alt="Bild 9 der Unterkunft" /></div>
+    <div class="galerie-item"><img src="medien/Image-10.jpg" alt="Bild 10 der Unterkunft" /></div>
+  </div>
+</section>
+
+<section id="map">
+  <h2 class="map-title">Unsere Anfahrt</h2>
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d157.63291596120172!2d10.751177389717121!3d45.78401535239836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sde!2sde!4v1744033207699!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="Impressum.html">Impressum</a>
+    <a href="Datenschutz.html">Datenschutz</a>
+    <a href="Agbs.html">AGBs</a>
+    <a href="Kontakt.html">Kontakt</a>
+    <a href="Buchung.html">Buchung</a>
+    <a href="Galerie.html">Galerie</a>
+  </div>
+  <div class="social-icons">
+    <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+    <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-x"></i></a>
+    <a href="https://www.youtube.com" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+  </div>
+  <p>&copy; <span id="copyright-year">2025</span> Palazzo Rustico. Alle Rechte vorbehalten.</p>
+</footer>
+
+<!-- COOKIE BANNER MODAL -->
+<div id="cookie-modal" class="cookie-modal" style="display: none;">
+  <div class="cookie-box">
+    <h3>Cookies auf dieser Website</h3>
+    <p>Wir verwenden Cookies, um Inhalte zu personalisieren und die Nutzererfahrung zu verbessern. Du kannst selbst entscheiden, welche Kategorien du zulässt.</p>
+    <div class="cookie-options">
+      <label><input type="checkbox" checked disabled> Funktionale Cookies (notwendig)</label>
+      <label><input type="checkbox" id="analytics-cookies"> Analytische Cookies</label>
+    </div>
+    <div class="cookie-buttons">
+      <button id="accept-all">Alle akzeptieren</button>
+      <button id="accept-necessary">Nur notwendige</button>
+      <button id="save-preferences">Speichern</button>
+    </div>
+  </div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+  function toggleMenu() {
+    const navList = document.getElementById('nav-list');
+    const hero = document.getElementById('hero');
+    navList.classList.toggle('active');
+    hero.style.marginTop = navList.classList.contains('active') ? navList.offsetHeight + 'px' : '0';
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Copyright automatisch aktualisieren
+    document.getElementById("copyright-year").textContent = new Date().getFullYear();
+
+    const modal = document.getElementById('cookie-modal');
+    const analyticsCheckbox = document.getElementById('analytics-cookies');
+
+    const preferences = JSON.parse(localStorage.getItem('cookiePreferences'));
+
+    if (!preferences || !preferences.functional) {
+      modal.style.display = 'flex';
+    }
+
+    document.getElementById('accept-all').addEventListener('click', () => {
+      localStorage.setItem('cookiePreferences', JSON.stringify({ functional: true, analytics: true }));
+      modal.style.display = 'none';
+    });
+
+    document.getElementById('accept-necessary').addEventListener('click', () => {
+      localStorage.setItem('cookiePreferences', JSON.stringify({ functional: true, analytics: false }));
+      modal.style.display = 'none';
+    });
+
+    document.getElementById('save-preferences').addEventListener('click', () => {
+      localStorage.setItem('cookiePreferences', JSON.stringify({
+        functional: true,
+        analytics: analyticsCheckbox.checked
+      }));
+      modal.style.display = 'none';
+    });
+  });
+</script>
+
+</body>
+</html>

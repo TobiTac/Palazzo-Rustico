@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buchung - Palazzo Rustico</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo">Palazzo Rustico</a>
+  <div class="burger-menu" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+  <nav>
+    <ul id="nav-list">
+      <li><a href="UnserHaus.html">Unser Haus</a></li>
+      <li><a href="Buchung.html">Buchung</a></li>
+      <li><a href="Galerie.html">Galerie</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="buchung" class="buchung-section">
+  <div class="container">
+    <h2 class="section-title">Buchen Sie Ihren Aufenthalt im Palazzo Rustico</h2>
+    <p class="section-description">Erleben Sie unvergessliche Tage im Herzen der Toskana, umgeben von wunderschöner Natur, charmanten Steinhäusern und modernem Komfort. Buchen Sie Ihr Zimmer oder Ihre Wohnung und lassen Sie sich von uns verwöhnen.</p>
+    
+    <div class="buchung-methoden">
+      <div class="buchung-item">
+        <i class="fas fa-calendar-alt"></i>
+        <h3>Preise</h3>
+        <ul>
+          <li><strong>März bis Ende April:</strong> 7 Nächte - 1200€</li>
+          <li><strong>Anfang Mai bis Mitte Mai:</strong> 7 Nächte - 1400€</li>
+          <li><strong>Ende Mai bis Mitte Juli:</strong> 7 Nächte - 1500€</li>
+          <li><strong>Ende Juli bis Mitte September:</strong> 7 Nächte - 1600€</li>
+          <li><strong>Mitte September bis Ende September:</strong> 7 Nächte - 1400€</li>
+          <li><strong>Oktober:</strong> 7 Nächte - 1200€</li>
+        </ul>
+        <p><strong>Pro Hund:</strong> 10 Euro/Tag</p>
+        <p><strong>Selbstständiger Check-in:</strong> zwischen 15:00 und 20:00 Uhr</p>
+        <p><strong>Check-out:</strong> bis 10:30 Uhr</p>
+      </div>
+      
+      <div class="buchung-item">
+        <i class="fas fa-credit-card"></i>
+        <h3>So buchen Sie</h3>
+        <p>Die Buchung ist einfach und unkompliziert. Folgen Sie einfach diesen Schritten:</p>
+        <ul>
+          <li>1. Scheiben Sie uns eine Mail mit ihren persönlichen Daten und dem Gewünschten Datum.</li>
+		  <p></p>
+          <li>2. Wir melden uns Zeitnah bei ihnen </li>
+		  <p></p>
+          <li>3. Wir senden ihnen alle Details nochmal schriftlich zu</li>
+        </ul>
+       
+      </div>
+
+      <div class="buchung-item">
+        <i class="fas fa-thumbs-up"></i>
+        <h3>Warum Palazzo Rustico?</h3>
+        <p>Unser charmantes Steinhaus bietet eine perfekte Mischung aus rustikalem Charme und modernem Luxus. Entspannen Sie in einer idyllischen Umgebung, genießen Sie die lokale Küche und entdecken Sie die reiche Kultur der Toskana. Ihr Aufenthalt bei uns wird unvergesslich sein!</p>
+        <p><strong>Inklusivleistungen:</strong></p>
+        <ul>
+          <li>Kostenloses WLAN </li>
+        
+          <li>Wunderschöne Aussicht auf die Umgebung</li>
+          <li>Parkplätze direkt vor der Unterkunft</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="buchungsbutton-container">
+      <a href="Kontakt.html" class="buchungsbutton">Jetzt buchen</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="Impressum.html">Impressum</a>
+    <a href="Datenschutz.html">Datenschutz</a>
+    <a href="AGBs.html">AGBs</a>
+    <a href="Kontakt.html">Kontakt</a>
+    <a href="Buchung.html">Buchung</a>
+    <a href="Galerie.html">Galerie</a>
+  </div>
+  <div class="social-icons">
+    <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+    <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.youtube.com" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+  </div>
+  <p>&copy; <span id="copyright-year">2025</span> Palazzo Rustico. Alle Rechte vorbehalten.</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const navList = document.getElementById('nav-list');
+    const hero = document.getElementById('hero');
+    navList.classList.toggle('active');
+    hero.style.marginTop = navList.classList.contains('active') ? navList.offsetHeight + 'px' : '0';
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("copyright-year").textContent = new Date().getFullYear();
+  });
+</script>
+
+</body>
+</html>

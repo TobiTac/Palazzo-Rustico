@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AGBs – Palazzo Rustico</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo">Palazzo Rustico</a>
+  <div class="burger-menu" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+  <nav>
+    <ul id="nav-list">
+      <li><a href="UnserHaus.html">Unser Haus</a></li>
+      <li><a href="Buchung.html">Buchung</a></li>
+      <li><a href="Galerie.html">Galerie</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="content-section" style="margin-top: 60px;">
+  <!-- Hier wird der Abstand zum Header durch das Margin oben festgelegt -->
+  <div class="content-text" style="text-align: center;">
+    <h2><strong>Allgemeine Geschäftsbedingungen (AGB)</strong></h2>
+    
+    <h3><strong>1. Geltungsbereich</strong></h3>
+    <p>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Buchungen und Vereinbarungen zwischen <strong>Palazzo Rustico</strong> und den Gästen, die unsere Unterkunft buchen. Mit der Buchung anerkennt der Gast diese AGB und verpflichtet sich, diese einzuhalten.</p>
+
+    <h3><strong>2. Vertragsabschluss</strong></h3>
+    <p>Der Vertrag kommt durch die Bestätigung der Buchung durch Palazzo Rustico zustande. Diese Bestätigung erfolgt nach Eingang der Buchung und der Prüfung der Verfügbarkeit. Ein Vertrag ist nur gültig, wenn die Buchung per E-Mail bestätigt wurde.</p>
+
+    <h3><strong>3. Leistungen</strong></h3>
+    <p>Unsere Leistungen umfassen die Bereitstellung der Unterkunft sowie die im Buchungsvertrag genannten zusätzlichen Services. Änderungen und Ergänzungen der angebotenen Leistungen bleiben vorbehalten, insbesondere im Falle von unvorhergesehenen Umständen wie beispielsweise höherer Gewalt.</p>
+
+    <h3><strong>4. Preise und Zahlungsbedingungen</strong></h3>
+    <p>Die Preise für die Buchung sind in der Bestätigung der Buchung aufgeführt. Alle angegebenen Preise verstehen sich inkl. der gesetzlichen Mehrwertsteuer. Zahlungen sind im Voraus zu leisten, und zwar entweder per Banküberweisung oder per Kreditkarte, wie in der Buchungsbestätigung angegeben.</p>
+
+    <h3><strong>5. Stornierung und Änderungen</strong></h3>
+    <p>Der Gast kann die Buchung jederzeit stornieren, wobei Stornogebühren anfallen können. Die genauen Stornierungsbedingungen sind im Buchungsvertrag aufgeführt. Änderungen der Buchung sind nur nach Absprache mit Palazzo Rustico möglich und können zusätzliche Kosten verursachen.</p>
+
+    <h3><strong>6. Haftung</strong></h3>
+    <p>Palazzo Rustico haftet nicht für Schäden, die durch höhere Gewalt, unvorhersehbare Ereignisse oder Handlungen des Gastes entstehen. Für Verlust oder Beschädigung von persönlichen Gegenständen des Gastes übernehmen wir keine Haftung.</p>
+
+    <h3><strong>7. Datenschutz</strong></h3>
+    <p>Alle personenbezogenen Daten des Gastes werden gemäß den geltenden Datenschutzgesetzen verarbeitet. Weitere Informationen finden Sie in unserer <a href="Datenschutz.html" style="color: #ffcc00;">Datenschutzerklärung</a>.</p>
+
+    <h3><strong>8. Schlussbestimmungen</strong></h3>
+    <p>Änderungen und Ergänzungen dieser AGB bedürfen der Schriftform. Sollte eine Bestimmung dieser AGB unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen davon unberührt.</p>
+
+    <p>Stand: Januar 2025</p>
+  </div>
+</section>
+
+<footer style="margin-top: 40px;">
+  <div class="footer-links">
+    <a href="Impressum.html">Impressum</a>
+    <a href="Datenschutz.html">Datenschutz</a>
+    <a href="AGBs.html">AGBs</a>
+    <a href="Kontakt.html">Kontakt</a>
+    <a href="Buchung.html">Buchung</a>
+    <a href="Galerie.html">Galerie</a>
+  </div>
+  <div class="social-icons">
+    <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+    <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.youtube.com" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+  </div>
+  <p>&copy; <span id="copyright-year">2025</span> Palazzo Rustico. Alle Rechte vorbehalten.</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const navList = document.getElementById('nav-list');
+    navList.classList.toggle('active');
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("copyright-year").textContent = new Date().getFullYear();
+  });
+</script>
+
+</body>
+</html>
